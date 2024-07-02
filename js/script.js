@@ -8,10 +8,11 @@ const getImage = async function () {
         "https://picsum.photos/v2/list?limit=100"
     );
     const images = await res.json();
-    console.log(images);
+    //console.log(images);
+    selectRandomImage(images);
 };
 
-getImage();
+//getImage();
 
 const selectRandomImage = function (images) {
     const randomIndex = Math.floor(Math.random() * images.length);
